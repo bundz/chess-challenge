@@ -1,0 +1,7 @@
+version: '2.0'
+services:
+  server:
+    ports:
+    - "3000:3000"
+    volumes:
+    - "./server/:/app"
