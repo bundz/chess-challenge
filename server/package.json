@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/nyc/bin/nyc.js --reporter=html ./node_modules/mocha/bin/mocha ./**/*.test.js --reporter mocha-simple-html-reporter --reporter-options output=report.html"
   },
   "author": "Vitor Alano de Ataides",
   "license": "ISC",
@@ -15,6 +15,8 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.1.1"
+    "mocha": "^7.1.1",
+    "mocha-simple-html-reporter": "^1.1.0",
+    "nyc": "^15.0.0"
   }
 }
