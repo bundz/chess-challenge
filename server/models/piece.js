@@ -38,6 +38,7 @@ class Piece {
   }
 
   getPossiblePositionsInTurns(turns, result={}) {
+
     if(turns < 1) {
       return;
     }

@@ -3,8 +3,8 @@ const { Piece } = require(`../models`);
 class PieceController {
 
   getPiecePossiblePositionsInTurns({ piece, position, turns }) {
-    const newPiece = Piece.initialize(piece, position);
-    return newPiece.getPossiblePositionsInTurns(turns).map((positions) => positions.value);
+    const newPiece = Piece.initialize_piece(piece, position);
+    return newPiece.getPossiblePositionsInTurns(turns);
   }
 
 }
