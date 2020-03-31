@@ -1,0 +1,23 @@
+.ColumnLabels {
+  display: flex;
+  width: 640px;
+  height: 10px;
+  margin-left: 24px;
+  padding-top: 16px;
+}
+
+.ColumnLabels > ul {
+  display: flex;
+  width: 640px;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.ColumnLabels > ul > li {
+  width: 80px;
+  height: 10px;
+  list-style: none;
+}
+

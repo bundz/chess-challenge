@@ -1,0 +1,27 @@
+.PiecePicker {
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 60px;
+}
+
+.PiecePicker > ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px;
+  margin-left: 29px;
+}
+
+.Piece {
+  flex-basis: 30%;
+  height: 44px;
+  border: 2px solid black;
+  margin: 2px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.box-active {
+  border-color: rgb(212, 179, 69);
+}
