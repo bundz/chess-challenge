@@ -1,0 +1,12 @@
+.Line {
+  display: flex;
+  flex-wrap: wrap;
+  width: 640px;
+  height: 80px;
+  background-color: rgb(160, 31, 153);
+}
+
+.Line-label {
+  display: flex;
+  height: 80px;
+}

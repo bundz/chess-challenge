@@ -1,0 +1,27 @@
+.Tile {
+  display: block;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.Tile-Black {
+  background-color: rgb(168, 134, 70);
+}
+
+.Tile-White {
+  background-color: white;
+}
+
+.selected {
+  z-index: 9999;
+  outline: 3px solid rgb(54, 54, 54);
+  box-sizing: border-box;
+  padding-top: 6px;
+}
+
+.possiblePosition {
+  opacity: 0.3;
+  box-sizing: border-box;
+  padding-top: 6px;
+}

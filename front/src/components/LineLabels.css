@@ -1,0 +1,23 @@
+.LineLabels {
+  display: flex;
+  width: 10px;
+  height: 640px;
+  margin-right: 16px;
+}
+
+.LineLabels > ul {
+  display: flex;
+  width: 10px;
+  height: 640px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.LineLabels > ul > li {
+  display: flex;
+  width: 10px;
+  height: 80px;
+  align-items: center;
+}
+
