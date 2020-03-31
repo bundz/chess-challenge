@@ -13,7 +13,7 @@ class King extends Piece {
       this.position.down.left,
     ];
 
-    return possiblePositions;
+    return possiblePositions.filter((position) => !position.isOutOfBounds);
   }
 }
 

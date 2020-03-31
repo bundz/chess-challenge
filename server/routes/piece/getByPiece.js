@@ -12,8 +12,7 @@ const schema = Joi.object({
 });
 
 const route = ({ params, query }, res) => {
-  console.log(`route`, params, query);
-  const result = PieceController.getPiecePossiblePositions({ piece: params.piece, turns: query.turns, position: query.position })
+  const result = PieceController.getPiecePossiblePositionsInTurns({ piece: params.piece, turns: query.turns, position: query.position })
   res.reply(result);
 };
 
