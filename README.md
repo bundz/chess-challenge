@@ -52,7 +52,7 @@ Server folder has some folders:
 * routes - for express routes
 
 ## How problem was solved
-First I decide to solve the problem for any chess piece and any number of turns.
+First I decided to solve the problem for any chess piece and any number of turns.
 So, the solution is to create a tree of possible positions, using piece movement. 
 I achive this tree by using recursion. See the pseudo-code below:
 
@@ -64,10 +64,49 @@ possiblePositionsInTurns piece, turns, result={}
    for p of piece.possiblePosition
      newPiece = new Piece(p)
      result[p] = true
-     possiblePositionsInTurns newPiece, turns - 1, result={}
+     possiblePositionsInTurns newPiece, turns - 1, result
      
    return result
 ```
+
+## Api 
+Server will run on port 3001. It has only one valid endpoint:
+
+### GetPiecePossiblePositions
+```
+GET /piece/:piece_name
+```
+This endpoind accepts as piece_name a string that should be one of
+```
+['knight', 'king', 'queen', 'bishop', 'rook', 'pawn']
+```
+#### Query 
+As query it accepts:
+* turns: (integer) greater than `0`. Defaults to `2`.
+* position: (string) A character between `A` and `H` followed by a number between `1` and `8`. Defaults to `'A1'`.
+
+#### Example
+An example of request would:
+
+```
+http://localhost:3001/piece/pawn?position=E4&turns=2
+```
+
+The response body will be:
+
+```
+{
+    "data": [
+        "E5",
+        "E6"
+    ]
+}
+```
+
+`data` will contains all possible positions for your request.
+
+#### Error
+Validation errors will occur if your request send any value different than the specified above. Extra data will be ignored.
 
 ## How to run tests
 Only server side has tests so to run it on server folder type:
