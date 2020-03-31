@@ -3,7 +3,7 @@
 
 ## How to run
 You will need Docker. So if don't have Docker click [Here](https://docs.docker.com/install/) and install it.
-With Docker installed, clone this repository and open it. In terminal executes:
+With Docker installed, clone this repository and open it. In terminal type:
 
 ```
 docker-compose up --build
