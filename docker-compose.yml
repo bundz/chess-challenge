@@ -2,3 +2,6 @@ version: '2.0'
 services:
   server:
     build: ./server
+  front:
+    build: ./front
+    stdin_open: true

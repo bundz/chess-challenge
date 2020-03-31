@@ -2,8 +2,13 @@ version: '2.0'
 services:
   server:
     ports:
-    - "3000:3000"
+    - "3001:3001"
     volumes:
     - "./server/:/app"
     environment:
-    - "PORT=3000"
+    - "PORT=3001"
+  front:
+    ports:
+    - "3000:3000"
+    volumes:
+    - "./front/:/app"
