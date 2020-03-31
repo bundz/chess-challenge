@@ -4,7 +4,8 @@ services:
     ports:
     - "3001:3001"
     volumes:
-    - "./server/:/app"
+      - "./server/:/app"
+      - "./front/node_modules:/app/node_modules"
     environment:
     - "PORT=3001"
   front:
@@ -12,3 +13,4 @@ services:
     - "3000:3000"
     volumes:
     - "./front/:/app"
+    - "./front/node_modules:/app/node_modules"
